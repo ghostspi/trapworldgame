@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#10131d">
+  <meta name="description" content="TRAP WORLD — trust nothing, survive everything.">
+  <title>TRAP WORLD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Trap World home"><span class="brand-mark">TW</span><span>TRAP<span class="accent">WORLD</span></span></a>
+      <div class="top-meta"><span class="live-dot"></span> <span>BUILD 0.1.0</span><span class="divider">/</span><span>THE BEGINNING</span></div>
+      <button class="icon-button" id="soundBtn" aria-label="Toggle sound" title="Toggle sound">♫</button>
+    </header>
+
+    <section class="game-wrap">
+      <div class="game-heading">
+        <div><p class="eyebrow">A VERY UNFRIENDLY ADVENTURE</p><h1>TRAP <span>WORLD</span></h1></div>
+        <div class="level-chip"><small>WORLD 01</small><strong>THE FIRST LIE</strong></div>
+      </div>
+
+      <div class="game-frame">
+        <canvas id="game" width="960" height="540" aria-label="Trap World platform game"></canvas>
+        <div class="hud">
+          <div class="hud-left"><span class="hud-label">LEVEL</span><strong id="levelValue">01</strong><span class="hud-sep"></span><span class="hud-label">DEATHS</span><strong id="deathValue">00</strong></div>
+          <div class="hud-right"><span class="hud-label">CHECKPOINT</span><strong id="checkpointValue">—</strong></div>
+        </div>
+        <div class="overlay" id="overlay">
+          <div class="overlay-card">
+            <div class="pixel-emblem">!</div>
+            <p class="eyebrow" id="overlayEyebrow">WELCOME TO THE WRONG PLACE</p>
+            <h2 id="overlayTitle">TRUST<br><span>NOTHING.</span></h2>
+            <p class="overlay-copy" id="overlayCopy">The path looks safe. That's exactly what it wants you to think.</p>
+            <button class="primary-btn" id="startBtn">START RUN <span>↗</span></button>
+            <p class="tiny-note">A / D OR ← / → TO MOVE <i>•</i> SPACE TO JUMP</p>
+          </div>
+        </div>
+        <div class="toast" id="toast" aria-live="polite"></div>
+      </div>
+
+      <div class="below-game">
+        <div class="controls-hint"><kbd>A</kbd><kbd>D</kbd><span>MOVE</span><kbd>SPACE</kbd><span>JUMP</span><kbd>R</kbd><span>RESTART</span></div>
+        <div class="progress"><span id="progressText">0% COMPLETE</span><div class="progress-track"><span id="progressBar"></span></div></div>
+      </div>
+      <div class="touch-controls" aria-label="Touch controls">
+        <div class="touch-group"><button data-key="left" aria-label="Move left">◀</button><button data-key="right" aria-label="Move right">▶</button></div>
+        <button class="jump-touch" data-key="jump" aria-label="Jump">JUMP <span>↗</span></button>
+      </div>
+    </section>
+
+    <footer class="footer"><span>NO HAND-HOLDING. NO MERCY.</span><span>MADE TO BE BEATEN. EVENTUALLY.</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
